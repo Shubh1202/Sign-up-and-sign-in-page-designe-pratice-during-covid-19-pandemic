@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <button class="btn" type="button" onclick="displayModal()">Login</button>
+    <div class="modal" id="modalid01">
+        <span class="canceltime" onclick="cancelModal()">&times;</span>
+    <form class="modalform" action="#" name="user_login" method="POST" onsubmit="return validateLogin(this)">
+        <div class="avatar">
+            <img src="avatar.png" alt="Avatar" title="Avatar">
+        </div>
+        <div class="container1">
+            <label for="username">username</label>
+            <input type="text" name="username" placeholder="Enter Username or Email"/>
+            <label for="userpass">password</label>
+            <input type="password" name="userpass" placeholder="Enter Password"/>
+            <button type="submit">login</button>
+            <input type="checkbox" name="rememberuser"/> Remember Me
+        </div>
+        <div class="container2">
+            <button class="btn" type="button" onclick="cancelModal()">Cancel</button>
+            <button class="btn" type="button" onclick="displayModal()"><a href="signup.html">SignUp</a></button>
+            <span class="pass">Forget <a href="#">Password?</a></span>
+
+        </div>
+    </form>
+</div>
+</body>
+<script src="function.js"></script>
+</html>

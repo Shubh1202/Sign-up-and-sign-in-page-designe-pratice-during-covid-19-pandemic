@@ -1,0 +1,103 @@
+*{margin: 0; padding: 0; box-sizing: border-box; text-transform: capitalize; font-size: 15px;}
+.container1,.container2, .pass{
+    margin: 15px 0;
+}
+h3{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(50,50,50,0.8);
+    height: 100vh;
+    width: 100%;
+    padding: 10px 30px;
+    z-index: 1;
+    animation: animate2 1s;
+}
+form{
+    /* position: absolute; */
+    /* left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 50%; */
+    height: auto;
+    background-color: #fff;
+    padding: 10px;
+}
+.avatar{
+    text-align: center;
+}
+.avatar img{
+    border-radius: 50%;
+}
+label{
+    font-weight: bold;
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 10px;
+    border: 0.5px solid #ddd;
+    border-radius: 5px;
+    margin: 15px 0px;
+}
+button{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #5aa;
+    color: white;
+    margin: 10px 0;
+}
+.btn{
+    width: auto;
+}
+.btn2 a, .btn a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+span{float: right;}
+.canceltime{
+    color: wheat;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.canceltime:hover{
+color: red;
+cursor: pointer;
+animation: animate1 1s;
+}
+@keyframes animate1{
+    form{transform: rotate(0deg)}
+    to{transform: rotate(180deg)};
+}
+@keyframes animate2{
+    from{transform: scale(0)}
+    to{transform: scale(1)};
+}
+@media screen and (max-width:560px){
+    .btn{
+        float: left;
+        width: 100%;
+    }
+    .pass{
+        float: left;
+    }
+    .canceltime{
+        display: none;
+    }
+    form{
+        width: 100%;
+        height: 100%;
+    }
+}
